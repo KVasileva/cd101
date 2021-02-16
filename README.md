@@ -1,9 +1,9 @@
 # My cd101
 
-Modules:
-1. Grasshopper
-2. Canvas
-3. Web IU
+*To-do list:*
+1. Install Rhino 7
+2. Do "lesson 1"
+3. Draw a hedgehog
 
-[This is me](https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/pwa_vertical_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg)
-
+[How-to](https://www.awn.com/sites/default/files/styles/original/public/image/attached/1026548-zootopiabyronhoward18.jpg)
+---
