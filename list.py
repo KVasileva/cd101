@@ -11,5 +11,4 @@ print (sum)
 
 
 #a[len(a)-1] = 11
-# users.append(name)
-# users.append(age)
+
