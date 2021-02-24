@@ -13,3 +13,4 @@ for i in range (n):
     print (f"first name: {com_list[i][0]}, last name: {com_list[i][1]}, age:  {age[i]}")
 s = int(sum (age)/n)
 print(f"Average age: {s}")
+
