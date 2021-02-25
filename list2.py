@@ -1,9 +1,19 @@
-data= []
+names= []
 ages= []
-data = input("Enter name ang age separeted with space").split( )
-for i in data:
-    data.append(i)
-print (f"{data}")  
+age_sum=0
+while True:
+    data = input("Enter name and age separeted with space: ").split( )
+    names.append(data[0])
+    ages.append(int(data[1]))
+    #age_sum = age_sum+ int(data[1])
+    status  = input ("Would you like to continue? If yes press Y, if no press N  ")
+    if status == "N":
+        break
+#avg_age =  age_sum/len(ages)
+avage = int(sum(ages)/len(ages))
+for idx, val in enumerate(names):
+    print (f"Users {idx}: {val}, {ages[idx]}")  
+print (f"Averade age: {avage}")
 
 # x=11
 # if x%2==0 :
