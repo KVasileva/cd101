@@ -4,9 +4,12 @@ def sum_foo (ages):
         s = s+age
     avg = s/ len (ages)
     return avg
+a =[1, 25, 6, 51, 5]
+
+b=sum_foo(a)
 
 print (sum_foo([1, 23, 56, 5, 5]))
-print (sum_foo([1, 25, 6, 51, 5]))
+print (b)
 
 
 

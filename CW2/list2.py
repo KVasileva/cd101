@@ -14,7 +14,6 @@ avage = int(sum(ages)/len(ages))
 for idx, val in enumerate(names):
     print (f"Users {idx}: {val}, {ages[idx]}")  
 print (f"Averade age: {avage}")
-
 # x=11
 # if x%2==0 :
 #     print("x is even")
