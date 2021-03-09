@@ -1,32 +1,53 @@
-
-
 def inp ():
-    names=[]
-    ages=[]
-    com_data1 = []
-    com_data1 = input("first name, last name, birth age, death age separated by space:\n").split(" ")
-    names.append(com_data1)
-    a = int(com_data1[3])-int(com_data1[2])
-    ages.append(a)
-    return (f"{names}, {ages}")
-
-def wultc ():     
-    while True:          
-        com = inp()             
-        status  = input ("Would you like to continue? If yes press Y, if no press N  ")        
+    while True:  
+        composers = {"Full name":[], "birth year":[], "death year":[] }
+        com_data = input("first name, last name, birth year, death year separated by space:\n").split(" ")
+        fname = com_data[0] + " " + com_data[1]
+        birth = int(com_data[2])
+        death = int(com_data[3])
+        composers["Full name"].append(fname)
+        composers["birth year"].append(birth)
+        composers["death year"].append(death)
+        status  = input ("Would you like to continue? If yes press Y, if no press N  ")       
         if status == "N":
             break
         else:
             continue
+    return composers
+
+def age (composers):
+    composers ["Vitality"] = []
+    for birth, death in zip(composers ["birth year"], composers["death year"]):
+        a = death-birth
+        composers ["Vitality"].append(a)
+    return composers
 
 
-print (inp())
+def avage (composers):
+    composers ["Average age"] = []
+    s=0
+    for a in composers["Vitality"]:
+        s = s+a
+        composers["Average age"].append(s)
+    return composers
+
+comp = inp()
+comp = age(comp)
+comp = avage(comp)
+print (comp)
 
 
 
 
-#com_data = input("first name, last name, birth age, death age separated by space:\n").split(" ")
+#for i in c:
+    #composers = {"name"[], "age"[]}
+    #composers["name"].append("c[i][1]")
+    #  a = int(c[i][3])-int(c[i][2])
+    #composers["age"]. append (a)
 
+
+#  a = int(com_data[3])-int(com_data[2])
+#     ages.append(a)
 
 # for idx, val in enumerate(names):
 #      print (f"User {idx}: {val}, {ages[idx]}")
