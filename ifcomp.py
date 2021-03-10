@@ -27,15 +27,20 @@ def avage (composers):
     composers ["Average age"] = []
     s=0
     for a in composers["Vitality"]:
-        s = s+a
+        s = (s+a)/len(composers["Vitality"])
         composers["Average age"].append(s)
     return composers
+
+def printcomp(composers):
+    for i in composers
+        print (f"Name {composers["Full name"][i]}")
+
+
 
 comp = inp()
 comp = age(comp)
 comp = avage(comp)
-print (comp)
-
+comp = printcomp(comp)
 
 
 
