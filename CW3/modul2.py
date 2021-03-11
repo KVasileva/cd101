@@ -1,2 +1,2 @@
 import avage
-print (avg.cos2([30,60,180]))
+print (avage.cos2([30,60,180]))
