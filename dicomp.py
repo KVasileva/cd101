@@ -24,20 +24,23 @@ def age (composers):
 
 
 def avage (composers):
-    composers ["Average_age"] = []
+    composers ["Average_age"] = [] #вношу в словарь ключ с одним элементом
     s=0
     for a in composers["Vitality"]:
-        s = (s+a)/len(composers["Vitality"])
-        composers["Average_age"].append(s)
+        s = (s+a)
+    d = s/len(composers["Vitality"])
+    composers["Average_age"].append(d)
     return composers
 
 def printcomp(composers):
-    for i, val in enumerate (composers["Full_name"]) :
-        #print(f"Name {i}: {val}, {composers["Vitality"][i]}")
+    for key in composers.keys():
+        for i, val in enumerate (composers["Vitality"]):
+            print(f"Age {i}: {val}, {composers["Full_name"][i]}")
+    #print(f"Average age: {composers["Average_age"]}")
+    print([value for value in composers.values()][4]) # ???
 
-comp= []
 comp = inp()
 comp = age(comp)
 comp = avage(comp)
-print (comp)
-#printcomp (comp)
+
+printcomp (comp)
