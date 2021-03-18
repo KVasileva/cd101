@@ -1,11 +1,12 @@
+
 def inp ():
+    composers = {"Fulname":[], "birth_year":[], "death_year":[] }
     while True:  
-        composers = {"Full_name":[], "birth_year":[], "death_year":[] }
         com_data = input("first name, last name, birth year, death year separated by space:\n").split(" ")
         fname = com_data[0] + " " + com_data[1]
         birth = int(com_data[2])
         death = int(com_data[3])
-        composers["Full_name"].append(fname)
+        composers["Fulname"].append(fname)
         composers["birth_year"].append(birth)
         composers["death_year"].append(death)
         status  = input ("Would you like to continue? If yes press Y, if no press N  ")       
@@ -17,9 +18,9 @@ def inp ():
 
 def age (composers):
     composers ["Vitality"] = []
-    for birth, death in zip(composers ["birth_year"], composers["death_year"]):
-        a = death-birth
-        composers ["Vitality"].append(a)
+    for birth, death in zip(composers ["birth_year"],composers ["death_year"]):
+            a = death-birth
+            composers ["Vitality"].append(a)
     return composers
 
 
@@ -32,15 +33,22 @@ def avage (composers):
     return composers
 
 def printcomp(composers):
-    for i in composers["Full_name"]:
-        print(f"Name {composers["Full_name"][i]}")
+    for i, val in enumerate (composers["Fulname"]):
+        print(f"Name {i}: {val}")
 
+    # for i, val in enumerate (composers["Fulname"]):
+    #     print(f"Name {i}: {val}, age: {composers["Vitality"][i]}")
+    
+    for v in (composers["Vitality"]):
+        print(f"{v}")
+    for c in (composers["Average_age"]):
+            print(f"{c}")
 
 
 comp = inp()
-# comp = age(comp)
-# comp = avage(comp)
-#printcomp(comp)
+comp = age(comp)
+comp = avage(comp)
+printcomp(comp)
 
 
 
