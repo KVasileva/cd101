@@ -40,8 +40,6 @@ def printcomp(composers):
             print(f"{key} {val} ")
      #print([value for value in composers.values()][4]) # ???
 
-
- 
 #comp = {"Full_name":["ab","bc","fd"], "birth_year":[20,30,50], "death_year":[60,90,350]}
 
 comp = inp()
